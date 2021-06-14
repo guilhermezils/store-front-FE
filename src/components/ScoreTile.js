@@ -5,8 +5,14 @@ class ScoreTile extends Component{
     render(){
         return(
             <div>
-                <h1>Score Tile</h1>
-                <ScoreDetails />
+            <div>
+                <img key={this.props.score.id} 
+                alt={this.props.score.name} 
+                src={this.props.score.cover}/>
+            </div>  
+                <p>{this.props.score.name}</p>
+                
+                <ScoreDetails score={this.props.score}/>
             </div>
         )
     }

@@ -5,8 +5,10 @@ class ScoreContainer extends Component{
     render(){
         return(
             <div>
-                <h1>ScoreContainer</h1>
-                <ScoreTile />
+                {this.props.scores.map(score => <ScoreTile 
+                Key={score.id}
+                score={score} />)}
+                
             </div>
         )
     }

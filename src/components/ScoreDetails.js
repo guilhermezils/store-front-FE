@@ -4,7 +4,7 @@ class ScoreDetails extends Component{
     render(){
         return(
             <div>
-                <h1>Score Details</h1>
+                <p>{ "$"+this.props.score.price}</p>
             </div>
         )
     }
