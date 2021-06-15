@@ -5,6 +5,9 @@ class ScoreDetails extends Component{
         return(
             <div>
                 <p>{ "$"+this.props.score.price}</p>
+                <button>add to cart</button>
+                <br/>
+                <br/>
             </div>
         )
     }

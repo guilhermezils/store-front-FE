@@ -3,7 +3,10 @@
   text-align: center;
 }
 
-
+img {
+  width: 10%;
+  height: auto;
+}
 
 
 .navWrapper {
@@ -15,7 +18,7 @@
 }
 
 .headerText {
-  color: #F5A9BC;
+  color: #992429;
   font-size: 3em;
   margin: 0% 2% 0% 2%;
 }

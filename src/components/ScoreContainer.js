@@ -7,8 +7,9 @@ class ScoreContainer extends Component{
             <div>
                 {this.props.scores.map(score => <ScoreTile 
                 Key={score.id}
-                score={score} />)}
-                
+                score={score} />)
+                }
+                <button>add to cart</button>
             </div>
         )
     }
