@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "../App.css";
 import Nav from "./Nav"
-import Filter from "./Filter";
+
 import ScoreContainer from "./ScoreContainer";
 const scoreUrl = "http://localhost:3000/scores"
 
@@ -22,7 +22,7 @@ class App extends Component {
     return (
     <div className="App">
       <Nav />
-      <Filter />
+      
       <ScoreContainer scores={this.state.scores} />
     </div>
    
@@ -31,3 +31,11 @@ class App extends Component {
 }
 
 export default App;
+
+
+//removed filter
+
+
+//to-do
+
+// make a featured item, instead of Score container
