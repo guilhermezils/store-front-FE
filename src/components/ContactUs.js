@@ -1,14 +1,12 @@
 import React from 'react';
-import './App/css';
 
-class ContactUs extends Component{
-    render(){
-        return(
-            <div>
-             <h1> Contact Us</h1>
-            </div>
-        )
-    }
+
+function ContactUs(){
+    return (
+        <div>
+            <h1>ContactUs us</h1>
+        </div>
+    )
 }
 
-export default ContactUs; 
+export default ContactUs;

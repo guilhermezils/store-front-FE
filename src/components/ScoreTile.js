@@ -4,7 +4,7 @@ import ScoreDetails from "./ScoreDetails"
 class ScoreTile extends Component{
     render(){
         return(
-            <div>
+            <div className="wrapper">
             <div className="img">
                 <img key={this.props.score.id} 
                 alt={this.props.score.name} 

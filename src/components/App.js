@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import "../App.css";
 import Nav from "./Nav"
-import AboutUs from "./AboutUs"
-import ContactUS from "./ContactUs"
+import About from "./About"
+import ContactUs from "./ContactUs"
 import Shop from "./Shop"
 import ScoreContainer from "./ScoreContainer";
 import FeaturedScore from "./FeaturedScore";
@@ -27,12 +27,18 @@ class App extends Component {
 
   render() {
     return (
-    <div className="App">
-      <Nav />
+      <Router>
+    <div>
+      {/* <Nav /> */}
+   
+      
+      <Route path="/About" component={About} />
+      <Route path="/ContactUs" component={ContactUs} />
+      <Route path="/Shop" component={Shop} />
       
       <ScoreContainer scores={this.state.scores} />
     </div>
-   
+    </Router>
     );
   }
 }
