@@ -32,10 +32,10 @@ class App extends Component {
       {/* <Nav /> */}
    
       
-      <Route path="/About" component={About} />
+      {/* <Route path="/About" component={About} />
       <Route path="/ContactUs" component={ContactUs} />
       <Route path="/Shop" component={Shop} />
-      
+       */}
       <ScoreContainer scores={this.state.scores} />
     </div>
     </Router>
