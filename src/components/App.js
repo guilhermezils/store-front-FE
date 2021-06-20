@@ -34,7 +34,8 @@ class App extends Component {
       {/* <Route path="/" component={App} /> */}
       <Route path="/About" component={About} />
       <Route path="/ContactUs" component={ContactUs} />
-      <Route path="/Shop" component={Shop} />
+      <Route path="/Shop" 
+      render={()=><ScoreContainer scores={this.state.scores} />} />
       {/* <ScoreContainer scores={this.state.scores} /> */}
     </div>
     </Router>
