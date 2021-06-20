@@ -5,7 +5,7 @@ import About from "./About"
 import ContactUs from "./ContactUs"
 import Shop from "./Shop"
 import ScoreContainer from "./ScoreContainer";
-// import FeaturedScore from "./FeaturedScore";
+import FeaturedScore from "./FeaturedScore";
 // import LoginSignUp from "./LoginSignUp";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
@@ -29,14 +29,17 @@ class App extends Component {
     return (
       <Router>
     <div>
-      <Nav />
+      <Nav color="blue"/>
    
       {/* <Route path="/" component={App} /> */}
       <Route path="/About" component={About} />
       <Route path="/ContactUs" component={ContactUs} />
       <Route path="/Shop" 
-      render={()=><ScoreContainer scores={this.state.scores} />} />
+      component={()=><ScoreContainer scores={this.state.scores} />} />
       {/* <ScoreContainer scores={this.state.scores} /> */}
+
+      < FeaturedScore scores={this.state.scores}/>
+
     </div>
     </Router>
     );
