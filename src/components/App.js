@@ -3,7 +3,7 @@ import "../App.css";
 import Nav from "./Nav"
 import About from "./About"
 import ContactUs from "./ContactUs"
-import Shop from "./Shop"
+// import Shop from "./Shop"
 import ScoreContainer from "./ScoreContainer";
 import FeaturedScore from "./FeaturedScore";
 // import LoginSignUp from "./LoginSignUp";
@@ -28,19 +28,21 @@ class App extends Component {
   render() {
     return (
       <Router>
+        <Switch >
     <div>
-      <Nav color="blue"/>
+      <Nav />
    
-      {/* <Route path="/" component={App} /> */}
-      <Route path="/About" component={About} />
-      <Route path="/ContactUs" component={ContactUs} />
-      <Route path="/Shop" 
+      
+        <Route path="/About" component={About} />
+        <Route path="/ContactUs" component={ContactUs} />
+        <Route path="/Shop" 
       component={()=><ScoreContainer scores={this.state.scores} />} />
       {/* <ScoreContainer scores={this.state.scores} /> */}
 
       < FeaturedScore scores={this.state.scores}/>
 
     </div>
+      </Switch>
     </Router>
     );
   }
