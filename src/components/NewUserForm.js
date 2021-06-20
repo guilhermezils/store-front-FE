@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
 
 
-class ContactUs extends Component{
+class NewUserForm extends Component{
     render(){
 
         //set state?
 
     return (
         <div>
-            <h1>ContactUs us</h1>
+            <h1>NewUserForm us</h1>
         </div>
     )}
 }
 
-export default ContactUs;
+export default NewUserForm;

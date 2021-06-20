@@ -9,8 +9,9 @@ const Nav = () => {
                <Link to="/shop">Shop</Link>
                <Link to="/about">About us</Link>
                <Link to="/contact">Contact us</Link>
+               <Link to="/login">Login/SignUp</Link>
            </ul>
-           <span>SignUp/Login</span>
+           
        </nav>
     )
 }
