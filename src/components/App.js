@@ -36,7 +36,7 @@ class App extends Component {
    
      
         <Route path="/About" component={About} />
-        <Route path=" " render={()=> <Home /> } />
+        <Route path=" " render={()=><Home scores={this.state.scores} />} />
 
         <Route path="/ContactUs" component={ContactUs} />
 
