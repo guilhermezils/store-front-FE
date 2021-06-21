@@ -36,11 +36,11 @@ class App extends Component {
    
      
         <Route path="/About" component={About} />
-        <Route path=" " render={()=><Home scores={this.state.scores} />} />
+        <Route exact path="/" render={()=><Home scores={this.state.scores} />} />
 
         <Route path="/ContactUs" component={ContactUs} />
 
-        <Route path="/Shop" 
+        <Route exact path="/Shop" 
       component={()=><ScoreContainer scores={this.state.scores} />} />
 
         <Route path="/LoginSignUp" component={LoginSignUp} />

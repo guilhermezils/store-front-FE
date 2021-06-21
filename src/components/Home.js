@@ -9,7 +9,7 @@ class Home extends Component{
     return (
         <div>
         <p>hihihihi</p>
-            <FeaturedScore scores={this.state.scores} />
+            {/* <FeaturedScore scores={this.state.scores} /> */}
         </div>
     )}
 }
