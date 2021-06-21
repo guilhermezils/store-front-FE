@@ -9,6 +9,7 @@ import ScoreContainer from "./ScoreContainer";
 // import LoginSignUp from "./LoginSignUp";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import LoginSignUp from "./LoginSignUp";
+import Home from "./Home";
 
 const scoreUrl = "http://localhost:3000/scores"
 
@@ -33,12 +34,16 @@ class App extends Component {
     <div>
       <Nav />
    
-      
+     
         <Route path="/About" component={About} />
+        <Route path=" " render={()=> <Home /> } />
+
         <Route path="/ContactUs" component={ContactUs} />
+
         <Route path="/Shop" 
       component={()=><ScoreContainer scores={this.state.scores} />} />
-        <Route path="/LoginSignUp" component={ LoginSignUp} />
+
+        <Route path="/LoginSignUp" component={LoginSignUp} />
       {/* <ScoreContainer scores={this.state.scores} /> */}
 
       {/* < FeaturedScore scores={this.state.scores}/> */}
@@ -52,8 +57,8 @@ class App extends Component {
 
 export default App;
 
+//router props video on min 50. https://www.youtube.com/watch?v=bMo9Fe5lF2o
 
-//removed filter
 
 
 //to-do
