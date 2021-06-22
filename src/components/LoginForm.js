@@ -6,17 +6,24 @@ function CreateUserForm(){
 
     const handleSubmit = (event) => {
     event.preventDefault();
-    fetch('http://localhost:3000/api/v1/users',{
+    fetch('http://localhost:3000/api/v1/login',{
         method: 'POST',
         headers: {
+            'Content-Type': 'application/json',
             Accept: 'application/json',
-            'Content-Type': 'application/json'
+            Authorization: `Bearer <token>`
         },
         body: JSON.stringify({ user: { username, password } })
     })
     .then(response => response.json())
-    .then(result => console.log(result))
-}
+    .then(result =>{
+        if (result.error) {
+            console.error(result.error)
+        } else {
+            localStorage.setItem('token', result.token)
+        }
+    } )
+};
 
 
 
