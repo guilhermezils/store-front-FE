@@ -3,6 +3,7 @@ import "../App.css";
 import Nav from "./Nav"
 import About from "./About"
 import ContactUs from "./ContactUs"
+import Cart from "./Cart"
 // import Shop from "./Shop"
 import ScoreContainer from "./ScoreContainer";
 // import FeaturedScore from "./FeaturedScore";
@@ -10,11 +11,13 @@ import ScoreContainer from "./ScoreContainer";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import LoginSignUp from "./LoginSignUp";
 import Home from "./Home";
+import { useState } from 'react';
 
 const scoreUrl = "http://localhost:3000/scores"
 
 
 class App extends Component {
+  // const [isLoggedIn, setIsLoggedIn] = useState(false);
   state = {
     scores: []
   };
@@ -33,20 +36,22 @@ class App extends Component {
         <Switch >
     <div>
       <Nav />
-   
+      <Cart />
      
-        <Route path="/About" component={About} />
-        <Route exact path="/" render={()=><Home scores={this.state.scores} />} />
+        <Route exact path="/About" component={About} />
+        <Route exact path="/" component={Home} />
 
         <Route path="/ContactUs" component={ContactUs} />
 
         <Route exact path="/Shop" 
       component={()=><ScoreContainer scores={this.state.scores} />} />
 
-        <Route path="/LoginSignUp" component={LoginSignUp} />
+        <Route path="/LoginSignUp" component={LoginSignUp } />
       {/* <ScoreContainer scores={this.state.scores} /> */}
 
-      {/* < FeaturedScore scores={this.state.scores}/> */}
+      {/* <FeaturedScore scores={this.state.scores}/> */}
+
+      
 
     </div>
       </Switch>

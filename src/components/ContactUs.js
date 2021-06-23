@@ -8,7 +8,7 @@ class ContactUs extends Component{
 
     return (
         <div>
-            <h1>ContactUs us</h1>
+            <h1>Contact us</h1>
         </div>
     )}
 }

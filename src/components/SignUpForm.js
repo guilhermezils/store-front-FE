@@ -6,7 +6,7 @@ function CreateUserForm(){
 
     const handleSubmit = (event) => {
     event.preventDefault();
-    fetch('http://localhost:3000/api/v1/users',{
+    fetch('http://localhost:3000/users',{
         method: 'POST',
         headers: {
             Accept: 'application/json',
