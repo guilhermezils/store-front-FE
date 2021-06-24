@@ -1,15 +1,9 @@
-function Cart () {
+import CartTile from "./CartTile";
 
-    const handleClick = () => {
-        fetch('http://localhost:3000/carts',{
-            headers: {
-                Authorization: `Bearer ${localStorage.token}`
-            }
-        })
-        .then (response => response.json())
-        .then (result => console.log(result))
-    }
-    // const cart = () => {
+
+function Cart (props) {
+
+    // const handleClick = () => {
     //     fetch('http://localhost:3000/carts',{
     //         headers: {
     //             Authorization: `Bearer ${localStorage.token}`
@@ -19,26 +13,20 @@ function Cart () {
     //     .then (result => console.log(result))
     // }
 
+    console.log(props.cart.user.carts)
+    let renderCart = props.cart.user.carts.map(item => <CartTile 
+        Key={item.id}
+        score={item.score}
+        item={item}
+         onRemoveScore={props.onRemoveScore}/>)
+
     return (
-        
-      <button onClick={handleClick}>My Cart</button> 
+        <ul>
+            {renderCart}
+        </ul>
+    //   <button onClick={handleClick}>My Cart</button> 
     )
-    // return (
-    //     <div className="products-list">
-    //         { cart.score ? (<div>
-    //             <img src={cart.score.image} alt={cart.score.image}/>
-    //             <h1>{cart.score.price}$</h1>
-    //             <h2>{cart.score.name}</h2>
-                
-    //             {/* <button className="delete-btn" onClick={() => removeCartItem()}>Remove</button> */}
-    //         </div>): (
-    //             <div>
-    //                 Loading... Please Wait.
-    //             </div>
-    //             )
-    //         }
-    //     </div> 
-    // )
+  
 }
 
 

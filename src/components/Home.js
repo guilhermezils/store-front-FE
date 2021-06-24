@@ -1,17 +1,31 @@
-import React, { Component } from 'react';
+// import React, { Component } from 'react';
 // import FeaturedScore from "./FeaturedScore";
 
+import React from 'react';
 
-
-class Home extends Component{
-    render(){
-
+function Home(props) {
     return (
         <div>
-        
-            {/* <FeaturedScore scores={this.state.scores} /> */}
+           <h1>HOme</h1> 
         </div>
-    )}
+    );
 }
 
 export default Home;
+
+
+
+
+
+// class Home extends Component{
+//     render(){
+
+//     return (
+//         <div>
+       
+//             {/* <FeaturedScore scores={this.state.scores} /> */}
+//         </div>
+//     )}
+// }
+
+// export default Home;

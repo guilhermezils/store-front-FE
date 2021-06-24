@@ -1,16 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom"
-const Nav = () => {
+function Nav() {
     return(
        <nav>
            <h1>Bass Scores Edition</h1>
            <ul className="nav-links">
-               <Link to="/">Home</Link>
-               <Link to="/shop">Shop</Link>
-               <Link to="/about">About us</Link>
-               <Link to="/contactus">Contact us</Link>
-               <Link to="/loginsignup">Login/SignUp</Link>
-               <Link to="/Cart">Cart</Link>
+               <Link exact to="/">Home</Link>
+               <Link exact to="/Shop">Shop</Link>
+               <Link exact to="/about">About us</Link>
+               <Link exact to="/contactus">Contact us</Link>
+               <Link exact to="/loginsignup">Login/SignUp</Link>
+               <Link exact to="/Cart">Cart</Link>
            </ul>
            
        </nav>
